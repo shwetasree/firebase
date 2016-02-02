@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+  <script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js">
+      
+  </script>
+<script>
+var myFirebaseRef = new Firebase("https://boiling-fire-9536.firebaseio.com/");
+	 myFirebaseRef.child("Lorem Ipsum").on("value", function(snapshot) {
+  document.getElementById("div1").innerHTML=snapshot.val(); 
+  });
+  myFirebaseRef.child("Lorem Ipsum 1").on("value", function(snapshot) {
+  document.getElementById("div2").innerHTML=snapshot.val(); 
+  });
+  myFirebaseRef.child("Lorem Ipsum 2").on("value", function(snapshot) {
+  document.getElementById("div3").innerHTML=snapshot.val(); 
+  });
+  myFirebaseRef.child("Lorem Ipsum 3").on("value", function(snapshot) {
+  document.getElementById("div4").innerHTML=snapshot.val(); 
+});
+</script>
+  <script type="text/javascript" src="validation.js"></script>
+</head>
+<body>
+
+<header >
+  <p>SEARS HOLDINGS </p><p>INDIA</p>
+</header>
+
+<div class="left inner">
+<div>
+<center><img class="imgleft" src="img1.jpg">
+<p>
+Sears IT and Management Services (India) Pvt. Limited, also known as Sears Holdings India (SHI) provides corporate IT services to Sears Holdings Corporation (NASDAQ:SHLD) and its family of companies including Sears Roebuck and Co. and Kmart Corporation.
+
+</p></center>
+</div>
+<hr>
+<div>
+<center><img class="imgleft" src="img1.jpg">
+<p>
+Sears IT and Management Services (India) Pvt. Limited, also known as Sears Holdings India (SHI) provides corporate IT services to Sears Holdings Corporation (NASDAQ:SHLD) and its family of companies including Sears Roebuck and Co. and Kmart Corporation.
+
+</p></center>
+</div>
+</div>
+  
+<div class="right inner">
+<h2>Latest News</h2>
+<div class="outerdiv"><div id="div1"></div><div class="innerdiv" ><button value="Read More" onclick="call()">Read More</button></div></div>
+<div class="outerdiv"><div id="div2"></div><div class="innerdiv" ><button value="Read More" onclick="call()">Read More</button></div></div>
+<div class="outerdiv"><div id="div3"></div><div class="innerdiv" ><button value="Read More" onclick="call()">Read More</button></div></div>
+<div class="outerdiv"><div id="div4"></div><div class="innerdiv" ><button value="Read More" onclick="call()">Read More</button></div></div>
+</div>
+
+<div class="footer" >
+   
+    <span class="innerleft">
+       <h3>Sears Address:</h3>
+        <div><i class="fa fa-envelope"></i>  &nbsp;  &nbsp;info@searshc.com</div>
+        <div><i class="fa fa-home"></i>  &nbsp;  &nbsp;Sears Holdings Pune</div>
+        <div> &#9742;   &nbsp;  &nbsp;0206478237  </div>
+        <div> &copy;  &nbsp;  &nbsp;Copyright 2016 </div>  
+   </span>
+    <span class="innerright">
+       <h3>Contact:</h3><form name="fname" onsubmit="return validateForm()">
+        
+			<p><td><input type="email" name="email" id="email" placeholder="Email" ></p>
+		 	<p><input type="text" name="uname" id="uname" placeholder="Name"></p>
+			<p><textarea rows=5 cols=21 name="msg" id="msg" placeholder="Enter your message.."></textarea></p>
+			
+		 <p><input type=submit value="Submit" ></p>
+		
+		<p id="output"></p></form>
+   </span>
+</div>
+
+</body>
+</html>
